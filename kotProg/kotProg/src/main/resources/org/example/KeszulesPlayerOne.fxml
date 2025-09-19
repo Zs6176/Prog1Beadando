@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="900.0" minWidth="1600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.KeszulesControl">
+   <children>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+            <Label fx:id="lablePenz" alignment="CENTER" contentDisplay="CENTER" style="-fx-content-display: center;" text="Penz" />
+            <Text fx:id="textPenz" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button fx:id="btNextPl" contentDisplay="TOP" disable="true" mnemonicParsing="false" onAction="#btNextPlClick" style="-fx-padding: 10px;" text="Következő Player" textAlignment="CENTER" />
+        </buttons>
+      </ButtonBar>
+      <TabPane minHeight="-Infinity" prefHeight="679.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tulajdonságok">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="60.0" text="Támadás" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="50.0" layoutY="120.0" text="Védekezés" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="120.0" />
+                        <Label layoutX="50.0" layoutY="180.0" text="Varázserő" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="180.0" />
+                        <Label layoutX="50.0" layoutY="240.0" text="Tudás" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="240.0" />
+                        <Label layoutX="50.0" layoutY="300.0" text="Morál" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="300.0" />
+                        <Label layoutX="50.0" layoutY="360.0" text="Szerencse" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="360.0" />
+                        <Slider fx:id="slideMoral" blockIncrement="1.0" layoutX="142.0" layoutY="289.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="300.0" />
+                        <Slider fx:id="slideTamadas" blockIncrement="1.0" layoutX="175.0" layoutY="60.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onDragDetected="#sliderMoClick" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" />
+                        <Slider fx:id="slideVarazsero" blockIncrement="1.0" layoutX="175.0" layoutY="180.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="180.0" />
+                        <Slider fx:id="slideTudas" blockIncrement="1.0" layoutX="149.0" layoutY="229.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="240.0" />
+                        <Slider fx:id="slideSzerencse" blockIncrement="1.0" layoutX="142.0" layoutY="349.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="360.0" />
+                        <Slider fx:id="slideVedekezes" blockIncrement="1.0" layoutX="175.0" layoutY="120.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseClicked="#sliderMoClick" prefHeight="16.0" prefWidth="1162.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="120.0" />
+                        <Button fx:id="btTulSave" layoutX="52.0" layoutY="437.0" mnemonicParsing="false" onAction="#btTulSaveClick" text="Save" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="437.0" />
+                        <Label fx:id="lableTuEL" layoutX="224.0" layoutY="441.0" text="Ára" AnchorPane.leftAnchor="224.0" AnchorPane.topAnchor="441.0" />
+                        <Text fx:id="textTulPenz" layoutX="277.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Varázslatok">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="60.0" layoutY="50.0" text="Villámcsapás" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="60.0" layoutY="150.0" text="Tűzlabda" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="60.0" layoutY="250.0" text="Feltámasztás" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="60.0" layoutY="350.0" text="Fagyasztás" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="60.0" layoutY="450.0" text="Label" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="450.0" />
+                        <CheckBox fx:id="checkBVarazsVilam" layoutX="980.0" layoutY="82.0" mnemonicParsing="false" onAction="#checkBVarazsVilamAction" AnchorPane.leftAnchor="980.0" AnchorPane.topAnchor="82.0" />
+                        <Label layoutX="210.0" layoutY="60.0" text="60" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="210.0" layoutY="150.0" text="120" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="210.0" layoutY="250.0" text="120" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="210.0" layoutY="350.0" text="100" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="210.0" layoutY="450.0" text="Label" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="73.0" layoutY="14.0" text="Varazslat" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="207.0" layoutY="14.0" text="Ara" AnchorPane.leftAnchor="207.0" AnchorPane.topAnchor="14.0" />
+                        <Line fx:id="line" endX="10000.0" layoutY="43.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8735.5" AnchorPane.topAnchor="55.5" />
+                        <Line fx:id="line1" endX="10000.0" layoutX="-20.0" layoutY="350.0" AnchorPane.leftAnchor="-20.5" AnchorPane.rightAnchor="-8700.5" AnchorPane.topAnchor="345.5" />
+                        <Line fx:id="line2" endX="10000.0" layoutY="450.0" AnchorPane.leftAnchor="-20.5" AnchorPane.topAnchor="445.5" />
+                        <Line fx:id="line3" endX="10000.0" layoutY="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8721.0" AnchorPane.topAnchor="245.5" />
+                        <Line fx:id="line4" endX="10000.0" layoutX="1.0" layoutY="146.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8721.0" AnchorPane.topAnchor="145.5" />
+                        <Label layoutX="287.0" layoutY="14.0" text="Mana Költseg" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="320.0" layoutY="60.0" text="5" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="323.0" layoutY="150.0" text="9" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="323.0" layoutY="250.0" text="6" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="323.0" layoutY="350.0" text="5" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="323.0" layoutY="450.0" text="Label" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="622.0" layoutY="14.0" text="Varázslat Leírása" AnchorPane.leftAnchor="622.0" AnchorPane.topAnchor="14.0" />
+                        <Text layoutX="557.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egy kiválasztott ellenséges egységre" AnchorPane.leftAnchor="557.0" AnchorPane.topAnchor="60.93310546875" />
+                        <Text layoutX="572.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(varázserő * 30) sebzés okozása" AnchorPane.leftAnchor="572.0" AnchorPane.topAnchor="83.93310546875" />
+                        <Text layoutX="515.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egy kiválasztott mező körüli 3x3-as területen lévő" AnchorPane.leftAnchor="515.0" AnchorPane.topAnchor="150.0" />
+                        <Text layoutX="540.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="összes (saját, illetve ellenséges) egységre" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="172.0" />
+                        <Text layoutX="569.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(varázserő * 20) sebzés okozása" AnchorPane.leftAnchor="569.0" AnchorPane.topAnchor="199.0" />
+                        <Text layoutX="532.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egy kiválasztott saját egység feltámasztása." AnchorPane.leftAnchor="532.0" AnchorPane.topAnchor="258.0" />
+                        <Text layoutX="523.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximális gyógyítás mértéke: (varázserő * 50)" AnchorPane.leftAnchor="523.0" AnchorPane.topAnchor="282.0" />
+                        <Text layoutX="526.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(de az eredeti egységszámnál több nem lehet)" AnchorPane.leftAnchor="526.0" AnchorPane.topAnchor="308.0" />
+                        <Label layoutX="934.0" layoutY="14.0" text="Magamal viszem" AnchorPane.leftAnchor="934.0" AnchorPane.topAnchor="14.0" />
+                        <CheckBox fx:id="checkBVarazstuz" layoutX="980.0" layoutY="190.0" mnemonicParsing="false" onAction="#checkBVarazsTuzAction" AnchorPane.leftAnchor="980.0" AnchorPane.topAnchor="190.0" />
+                        <CheckBox fx:id="checkBVarazsFel" layoutX="980.0" layoutY="289.0" mnemonicParsing="false" onAction="#checkBVarazsFelAction" AnchorPane.leftAnchor="980.0" AnchorPane.topAnchor="289.0" />
+                        <CheckBox fx:id="checkBVarazsFagy" layoutX="980.0" layoutY="386.0" mnemonicParsing="false" onAction="#checkBVarazsFagyAction" AnchorPane.leftAnchor="980.0" AnchorPane.topAnchor="386.0" />
+                        <CheckBox layoutX="980.0" layoutY="494.0" mnemonicParsing="false" AnchorPane.leftAnchor="980.0" AnchorPane.topAnchor="494.0" />
+                        <Button fx:id="btVarSave" layoutX="42.0" layoutY="568.0" mnemonicParsing="false" onAction="#btVarSaveClick" text="Save" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="568.0" />
+                        <Label fx:id="LableVarKolt" layoutX="134.0" layoutY="572.0" text="Koltseg" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="572.0" />
+                        <Text fx:id="textVarPenz" layoutX="216.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                        <Text layoutX="591.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lefagyaszt egy egységet " />
+                        <Text layoutX="568.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="és az az egység kimarad a körből" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Egysegek">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="60.0" layoutY="50.0" text="Földműves" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="60.0" layoutY="150.0" text="Íjász" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="60.0" layoutY="250.0" text="Griff" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="60.0" layoutY="350.0" text="Bérgyilkos" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="60.0" layoutY="450.0" text="Jégember" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="210.0" layoutY="60.0" text="2" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="210.0" layoutY="150.0" text="6" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="210.0" layoutY="250.0" text="15" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="210.0" layoutY="350.0" text="30" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="210.0" layoutY="450.0" text="50" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="73.0" layoutY="14.0" text="Egyseg" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="207.0" layoutY="14.0" text="Ara" AnchorPane.leftAnchor="207.0" AnchorPane.topAnchor="14.0" />
+                        <Line fx:id="line1102" endX="10000.0" layoutY="43.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8735.5" AnchorPane.topAnchor="50.0" />
+                        <Line fx:id="line11" endX="10000.0" layoutX="-23.0" layoutY="342.0" AnchorPane.leftAnchor="-23.5" AnchorPane.rightAnchor="-8697.5" AnchorPane.topAnchor="340.0" />
+                        <Line fx:id="line21" endX="10000.0" layoutY="450.0" AnchorPane.leftAnchor="-0.5" AnchorPane.rightAnchor="-8720.5" AnchorPane.topAnchor="440.0" />
+                        <Line fx:id="line31" endX="10000.0" layoutX="-10.0" layoutY="241.0" AnchorPane.leftAnchor="-10.5" AnchorPane.rightAnchor="-8710.5" AnchorPane.topAnchor="240.0" />
+                        <Line fx:id="line41" endX="10000.0" layoutY="137.0" AnchorPane.leftAnchor="-0.5" AnchorPane.rightAnchor="-8720.5" AnchorPane.topAnchor="140.0" />
+                        <Label layoutX="301.0" layoutY="14.0" text="Sebzes" AnchorPane.leftAnchor="301.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="320.0" layoutY="60.0" text="1-1" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="323.0" layoutY="150.0" text="2-4" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="323.0" layoutY="250.0" text="5-10" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="323.0" layoutY="350.0" text="10-15" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="323.0" layoutY="450.0" text="15-20" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="450.0" />
+                        <Button fx:id="btEgySave" layoutX="42.0" layoutY="568.0" mnemonicParsing="false" onAction="#btEgySaveClick" text="Save" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="568.0" />
+                        <Label fx:id="LableEgyKolt" layoutX="134.0" layoutY="572.0" text="Koltseg" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="572.0" />
+                        <Label layoutX="403.0" layoutY="14.0" text="Életerő" AnchorPane.leftAnchor="403.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="422.0" layoutY="60.0" text="3" AnchorPane.leftAnchor="422.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="422.0" layoutY="150.0" text="7" AnchorPane.leftAnchor="422.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="419.0" layoutY="250.0" text="30" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="409.0" layoutY="350.0" text="4" AnchorPane.leftAnchor="409.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="409.0" layoutY="450.0" text="50" AnchorPane.leftAnchor="409.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="497.0" layoutY="14.0" text="Sebesség" AnchorPane.leftAnchor="497.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="523.0" layoutY="60.0" text="4" AnchorPane.leftAnchor="523.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="523.0" layoutY="150.0" text="4" AnchorPane.leftAnchor="523.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="528.0" layoutY="250.0" text="7" AnchorPane.leftAnchor="528.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="524.0" layoutY="350.0" text="15" AnchorPane.leftAnchor="524.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="528.0" layoutY="450.0" text="5" AnchorPane.leftAnchor="528.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="587.0" layoutY="14.0" text="Kezdeményezés" AnchorPane.leftAnchor="587.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="624.0" layoutY="60.0" text="8" AnchorPane.leftAnchor="624.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="624.0" layoutY="150.0" text="9" AnchorPane.leftAnchor="624.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="625.0" layoutY="250.0" text="15" AnchorPane.leftAnchor="625.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="625.0" layoutY="350.0" prefHeight="15.0" prefWidth="17.0" text="20" AnchorPane.leftAnchor="625.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="625.0" layoutY="450.0" text="10" AnchorPane.leftAnchor="625.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="756.0" layoutY="14.0" text="Speciális Képeség" AnchorPane.leftAnchor="756.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="797.0" layoutY="60.0" text="Nincs" AnchorPane.leftAnchor="797.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="796.0" layoutY="150.0" text="Lövés" AnchorPane.leftAnchor="796.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="736.0" layoutY="250.0" text="végtelen visszatámadás" AnchorPane.leftAnchor="736.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="697.0" layoutY="350.0" text="Teljes egység azonali megölés esélye van" AnchorPane.leftAnchor="697.0" AnchorPane.topAnchor="350.0" />
+                        <Label layoutX="772.0" layoutY="450.0" text="Lefagyasztás" AnchorPane.leftAnchor="772.0" AnchorPane.topAnchor="450.0" />
+                        <Label layoutX="1053.0" layoutY="14.0" text="Darabszám" />
+                        <Slider fx:id="slideFold" blockIncrement="1.0" layoutX="35.0" layoutY="90.0" max="250.0" onMouseClicked="#slFolClick" prefHeight="16.0" prefWidth="1196.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="90.0" />
+                        <Label fx:id="labelFoldDb" layoutX="1072.0" layoutY="60.0" text="0" AnchorPane.leftAnchor="1072.0" AnchorPane.topAnchor="60.0" />
+                        <Label fx:id="labelGriffdb" layoutX="1072.0" layoutY="250.0" text="0" AnchorPane.leftAnchor="1072.0" AnchorPane.topAnchor="250.0" />
+                        <Label fx:id="labelIjaszDb" layoutX="1072.0" layoutY="150.0" text="0" AnchorPane.leftAnchor="1072.0" AnchorPane.topAnchor="150.0" />
+                        <Label fx:id="labelAssiDb" layoutX="1072.0" layoutY="350.0" text="0" AnchorPane.leftAnchor="1072.0" AnchorPane.topAnchor="350.0" />
+                        <Label fx:id="labelIceDb" layoutX="1072.0" layoutY="450.0" text="0" AnchorPane.leftAnchor="1072.0" AnchorPane.topAnchor="450.0" />
+                        <Slider fx:id="slideIj" blockIncrement="1.0" layoutX="35.0" layoutY="183.0" max="250.0" onMouseClicked="#slIjClick" prefHeight="16.0" prefWidth="1196.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="183.0" />
+                        <Slider fx:id="slideGriff" blockIncrement="1.0" layoutX="36.0" layoutY="286.0" max="250.0" onMouseClicked="#slGriffClick" prefHeight="16.0" prefWidth="1196.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="286.0" />
+                        <Slider fx:id="slideBer" blockIncrement="1.0" layoutX="35.0" layoutY="392.0" max="250.0" onMouseClicked="#slBerClick" prefHeight="16.0" prefWidth="1196.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="392.0" />
+                        <Slider fx:id="slideJeg" blockIncrement="1.0" layoutX="35.0" layoutY="485.0" max="250.0" onMouseClicked="#slJegClick" prefHeight="16.0" prefWidth="1196.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="485.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

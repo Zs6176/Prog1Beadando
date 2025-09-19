@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="900.0" minWidth="1600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Palya" fx:id="palyaVBox">
+   <children>
+      <BorderPane minHeight="720.0" minWidth="1280.0">
+         <center>
+            <AnchorPane fx:id="acpVilagLetrehoz" minHeight="800.0" minWidth="960.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <AnchorPane fx:id="acpLeftHos" maxWidth="320.0" minHeight="800.0" minWidth="320.0" BorderPane.alignment="CENTER_LEFT" />
+         </left>
+         <right>
+            <AnchorPane fx:id="acpRightHos" maxWidth="320.0" minHeight="800.0" minWidth="320.0" BorderPane.alignment="CENTER_RIGHT" />
+         </right>
+         <top>
+            <AnchorPane fx:id="acpFelso" minHeight="100.0" minWidth="1600.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</VBox>
